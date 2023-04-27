@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const LandingPage(){
+const LandingPage = () => {
   return(
     <div>
       <h1>Bienvenidos</h1>

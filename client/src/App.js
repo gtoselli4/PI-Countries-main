@@ -1,12 +1,19 @@
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import LandingPage from './components/landingpage/landing.js';
+import Home from './components/homepage/home.js';
+import Detail from './components/detailpage/detail.js';
+import Form from './components/formpage/form.js';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <h1>Henry Countries</h1>
-      </div>
+      <Switch>
+        <Route exact path = '/' element= {<LandingPage/>} />
+        <Route path = '/home' element= {<Home/>} />
+        <Route path='/home/:id' element= {<Detail/>} />
+        <Route path= '/create' element = {<Form/>} />
+      </Switch>
     </BrowserRouter>
   );
 }
